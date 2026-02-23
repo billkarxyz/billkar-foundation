@@ -25,7 +25,7 @@ export default function Resume() {
               Bachelor of Computer Science
             </h3>
             <p className="text-secondary-foreground text-sm">
-              University of Terbuka
+              University of Al-Musdariyah
             </p>
             <p className="text-muted-foreground text-sm">2023 - Present</p>
             <p className="mt-2 text-sm leading-relaxed">
