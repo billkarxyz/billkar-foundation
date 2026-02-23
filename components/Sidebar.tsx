@@ -110,7 +110,7 @@ export default function Sidebar() {
           loop
           duration={200}
           delay={1000}>
-          Full Stack Developer
+          Enthusiast Tech | Enthusiast Crypto
         </TypingAnimation>
         <Button
           size={"sm"}
