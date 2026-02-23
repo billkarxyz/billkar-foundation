@@ -51,7 +51,7 @@ export default function Sidebar() {
   const downloadResume = () => {
     const link = document.createElement("a");
     link.href = "/assets/resume.pdf"; // Ganti dengan URL file resume Anda
-    link.download = "Bagus_Uswanto_Resume.pdf"; // Ganti dengan nama file yang diinginkan
+    link.download = "billkar_Resume.pdf"; // Ganti dengan nama file yang diinginkan
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -97,13 +97,13 @@ export default function Sidebar() {
           transition={{ duration: 1, ease: "easeOut" }}
           style={{ transformStyle: "preserve-3d" }}>
           <Avatar>
-            <AvatarImage src="/assets/profile.jpg" alt="Bagus Uswanto" />
+            <AvatarImage src="/assets/profile.jpg" alt="Abill Akbar" />
             <AvatarFallback>BU</AvatarFallback>
           </Avatar>
         </motion.div>
         <span className="flex space-x-1 pt-4 font-bold text-2xl">
-          <p className="text-primary">Bagus</p>
-          <p>Uswanto</p>
+          <p className="text-primary">Abill</p>
+          <p>Akbar</p>
         </span>
         <TypingAnimation
           className="font-medium text-secondary-foreground text-sm"
@@ -121,7 +121,7 @@ export default function Sidebar() {
         </Button>
 
         <div className="flex flex-row justify-evenly mt-4 w-full">
-          <Link href="https://github.com/bagususwanto" target="_blank">
+          <Link href="https://github.com/billkarxyz" target="_blank">
             <Button
               aria-label="Github"
               className="rounded-full"
@@ -129,7 +129,7 @@ export default function Sidebar() {
               <FaGithub className="w-4 h-4" />
             </Button>
           </Link>
-          <Link href="https://www.instagram.com/bagus_uswanto" target="_blank">
+          <Link href="https://www.instagram.com/kukubibigaga" target="_blank">
             <Button
               aria-label="Instagram"
               className="rounded-full"
@@ -137,7 +137,7 @@ export default function Sidebar() {
               <FaInstagram className="w-4 h-4" />
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/@bagus.usw11" target="_blank">
+          <Link href="https://www.youtube.com/@kukubibigaga" target="_blank">
             <Button
               aria-label="Youtube"
               className="rounded-full"
@@ -150,17 +150,17 @@ export default function Sidebar() {
       <div className="flex flex-col justify-center items-center bg-gray-100/30 dark:bg-gray-700/30 p-4 w-full">
         <div className="flex flex-row items-center">
           <FaLocationDot className="mr-2 w-4 h-4 text-muted-foreground text-xs" />
-          <p className="text-muted-foreground text-xs">Karawang, Indonesia</p>
+          <p className="text-muted-foreground text-xs">Pandeglang, Indonesia</p>
         </div>
         <div className="flex flex-row items-center">
           <MdEmail className="mr-2 w-4 h-4 text-muted-foreground text-xs" />
           <p className="text-muted-foreground text-xs">
-            bagus_uswanto@outlook.com
+            aggresidlh@gmail.com
           </p>
         </div>
       </div>
       <div className="flex flex-col items-center my-2 px-4 w-full">
-        <Link href="mailto:bagus_uswanto@outlook.com" target="_blank">
+        <Link href="mailto:aggresidlh@gmail.com" target="_blank">
           <Button variant={"secondary"} size={"sm"}>
             <MdEmail className="w-4 h-4" />
             Email Me
