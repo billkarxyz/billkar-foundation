@@ -51,7 +51,7 @@ export default function Sidebar() {
   const downloadResume = () => {
     const link = document.createElement("a");
     link.href = "/assets/resume.pdf"; // Ganti dengan URL file resume Anda
-    link.download = "billkar_Resume.pdf"; // Ganti dengan nama file yang diinginkan
+    link.download = "billkar_Resume1.pdf"; // Ganti dengan nama file yang diinginkan
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
