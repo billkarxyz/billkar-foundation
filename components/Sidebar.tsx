@@ -48,6 +48,15 @@ export default function Sidebar() {
 
   const isDarkMode = theme === "dark";
 
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/resume.pdf"; // Ganti dengan URL file resume Anda
+    link.download = "billkar_Resume1.pdf"; // Ganti dengan nama file yang diinginkan
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex flex-col items-center bg-white/10 dark:bg-gray-800/30 shadow-xl dark:shadow-black/40 backdrop-blur-3xl py-4 border border-gray-200/20 dark:border-gray-700/30 rounded-xl w-full md:w-xs h-full">
       <div className="flex justify-between px-4 w-full">
@@ -88,21 +97,28 @@ export default function Sidebar() {
           transition={{ duration: 1, ease: "easeOut" }}
           style={{ transformStyle: "preserve-3d" }}>
           <Avatar>
-            <AvatarImage src="/assets/profile.jpg" alt="BILLKAR FOUNDATION" />
-            <AvatarFallback>BF</AvatarFallback>
+            <AvatarImage src="/assets/profile.jpg" alt="Abill Akbar" />
+            <AvatarFallback>BU</AvatarFallback>
           </Avatar>
         </motion.div>
         <span className="flex space-x-1 pt-4 font-bold text-2xl">
-          <p className="text-primary">BILLKAR</p>
-          <p>FOUNDATION</p>
+          <p className="text-primary">Abill</p>
+          <p>Akbar</p>
         </span>
         <TypingAnimation
           className="font-medium text-secondary-foreground text-sm"
           loop
           duration={200}
           delay={1000}>
-          Web3 Services | Crypto Community
+          Enthusiast Tech | Enthusiast Crypto
         </TypingAnimation>
+        <Button
+          size={"sm"}
+          variant={"default"}
+          className="mt-4"
+          onClick={downloadResume}>
+          Download Resume
+        </Button>
 
         <div className="flex flex-row justify-evenly mt-4 w-full">
           <Link href="https://github.com/billkarxyz" target="_blank">

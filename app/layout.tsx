@@ -19,9 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BILLKAR FOUNDATION",
-  description:
-    "Web3 and crypto services — ambassador programs, ICO / IDO / IEO, airdrops, testnets, DeFi, and NFTs.",
+  title: "Portfolio - Abill Akbar",
+  description: "My personal portfolio",
 };
 
 export default function RootLayout({
