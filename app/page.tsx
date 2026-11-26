@@ -2,65 +2,52 @@
 
 import CardService from "@/components/CardService";
 import {
-  AiFillApi,
-  AiFillCloud,
-  AiFillDatabase,
-  AiOutlineDeploymentUnit,
-  AiOutlineGateway,
-  AiOutlineSecurityScan,
-} from "react-icons/ai";
-import { HiComputerDesktop, HiDevicePhoneMobile } from "react-icons/hi2";
+  FaCoins,
+  FaFlask,
+  FaGem,
+  FaGift,
+  FaRocket,
+  FaUsers,
+} from "react-icons/fa";
 import { motion, Variants } from "framer-motion";
 
 export default function Home() {
   const services = [
     {
-      Icon: HiComputerDesktop,
-      title: "Frontend Development",
+      Icon: FaUsers,
+      title: "Ambassador Programs",
       description:
-        "Building responsive and interactive user interfaces using modern frontend frameworks like React.",
+        "Community programs that connect projects with people who help spread the word, test products, and grow the ecosystem.",
     },
     {
-      Icon: AiFillDatabase,
-      title: "Backend Development",
+      Icon: FaRocket,
+      title: "ICO / IDO / IEO",
       description:
-        "Designing and developing scalable backend systems using Node.js, Express, and PostgreSQL/MSSQL.",
+        "Token launch support and participation guides for initial coin, DEX, and exchange offerings.",
     },
     {
-      Icon: HiDevicePhoneMobile,
-      title: "Mobile Development",
+      Icon: FaGift,
+      title: "Airdrops",
       description:
-        "Creating cross-platform mobile apps using React Native for both Android and iOS.",
+        "Curated airdrop opportunities with step-by-step guidance to help the community claim them safely.",
     },
     {
-      Icon: AiFillApi,
-      title: "API Development",
+      Icon: FaFlask,
+      title: "Testnets",
       description:
-        "Creating efficient RESTful and GraphQL APIs for seamless integration between frontend and backend systems.",
+        "Hands-on testnet programs where the community can try new networks and products before they launch.",
     },
     {
-      Icon: AiFillCloud,
-      title: "Database Design & Optimization",
+      Icon: FaCoins,
+      title: "DeFi",
       description:
-        "Structuring relational databases with performance in mind and optimizing queries for fast data access.",
+        "Decentralized finance services and education — from staking and swaps to understanding new protocols.",
     },
     {
-      Icon: AiOutlineSecurityScan,
-      title: "Authentication & Authorization",
+      Icon: FaGem,
+      title: "NFTs",
       description:
-        "Implementing secure authentication systems, JWT-based login, and role-based access control.",
-    },
-    {
-      Icon: AiOutlineDeploymentUnit,
-      title: "DevOps & Deployment",
-      description:
-        "Deploying applications to production environments, setting up CI/CD pipelines, and configuring Nginx on Windows/Linux servers.",
-    },
-    {
-      Icon: AiOutlineGateway,
-      title: "System Integration",
-      description:
-        "Integrating multiple systems and services such as third-party APIs, payment gateways, and enterprise platforms.",
+        "NFT programs, collections, and community drops across the networks we work with.",
     },
   ];
 
@@ -90,18 +77,34 @@ export default function Home() {
     exit: { opacity: 0, scale: 0.8, y: 50 },
   };
 
+  const steps = [
+    {
+      title: "Discover",
+      description:
+        "Browse the programs and opportunities the foundation is running.",
+    },
+    {
+      title: "Participate",
+      description:
+        "Follow the steps for the program you join — tasks, testnets, or community activities.",
+    },
+    {
+      title: "Stay updated",
+      description:
+        "Check back for new programs, distributions, and announcements.",
+    },
+  ];
+
   return (
     <>
       <p className="mb-4 px-4 leading-relaxed">
-        Hi there! I'm a fullstack developer who loves working on both backend
-        and frontend parts of web apps. I make sure the server runs smoothly
-        with clean and efficient code, while also crafting beautiful and
-        intuitive interfaces. Whether it's designing APIs or building
-        interactive UI, I'm passionate about creating great user experiences
-        from end to end.
+        BILLKAR FOUNDATION is a Web3 and crypto services organization. We run
+        ambassador programs, token launches, airdrops, testnets, DeFi, and NFT
+        initiatives — connecting projects with a community that actually
+        participates.
       </p>
       <div className="flex flex-col bg-gray-100/30 dark:bg-gray-700/30 p-4 w-full h-full">
-        <h2 className="font-semibold text-2xl">What i'm doing</h2>
+        <h2 className="font-semibold text-2xl">What we do</h2>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -121,6 +124,34 @@ export default function Home() {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+      <div className="flex flex-col bg-gray-100/30 dark:bg-gray-700/30 p-4 w-full h-full mt-4">
+        <h2 className="font-semibold text-2xl">About the foundation</h2>
+        <p className="mt-2 px-0 leading-relaxed">
+          BILLKAR FOUNDATION helps Web3 projects reach real users and helps
+          the community take part in them — from early testnets and ambassador
+          programs to token launches and NFT drops. Everything we run is built
+          around participation: try the product, complete the tasks, and grow
+          with the project.
+        </p>
+      </div>
+      <div className="flex flex-col bg-gray-100/30 dark:bg-gray-700/30 p-4 w-full h-full mt-4">
+        <h2 className="font-semibold text-2xl">How it works</h2>
+        <div className="gap-4 grid grid-cols-1 md:grid-cols-3 mt-2">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-xl p-4 rounded-lg">
+              <p className="font-semibold text-primary text-lg">
+                {index + 1}. {step.title}
+              </p>
+              <p className="mt-1 text-sm">{step.description}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 leading-relaxed">
+          Explore the services above to find a program that fits you.
+        </p>
       </div>
     </>
   );
